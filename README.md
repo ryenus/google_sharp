@@ -1,5 +1,5 @@
 ## PLITT - Plain LInk To Target
-Skip Google redirection, i.e, it allows visiting Google search result without the redirection overhead.
+Plitt adds an extra link next to each search result on Google.
 
 Also available [here](http://userscripts.org/110750) on [userscripts.org](https://userscripts.org/).
 
