@@ -10,9 +10,8 @@
 // @Description allow visiting search result without the redirection overhead
 // ==/UserScript==
 
-(function(d) {
+(function(d, t) {
   if (! (d.forms[0] && d.forms[0].action.match(/search/))) return;
-  var t = 0;
   d.addEventListener('DOMSubtreeModified', function() {
     if (t == 0) t = setTimeout(function() {
       var r = d.getElementsByClassName('r');
@@ -27,4 +26,4 @@
       t = 0;
     }, 500);
   }, false);
-})(document);
+})(document, 0);
