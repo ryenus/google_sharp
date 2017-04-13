@@ -26,10 +26,11 @@
   d.addEventListener('DOMSubtreeModified', function() {
     if (t === 0) t = setTimeout(function() {
       Array.from(d.getElementsByClassName('r'), function(r, i) {
-          if (r.children.length == 1) {
-              r.insertAdjacentHTML("afterbegin",
-                "<a href='" + r.lastChild.href + "' target='_blank' class='g_sharp'>[#" + i +"]</a>&nbsp;");
-          }
+        if (r.children.length == 1) {
+          r.insertAdjacentHTML("afterbegin", "<a href='" + r.lastChild.href +
+            "' target='_blank' rel='noopener noreferrer' class='g_sharp'>[#" +
+            i +"]</a>&nbsp;");
+        }
       });
       t = 0;
     }, 500);
