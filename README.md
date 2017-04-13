@@ -1,19 +1,19 @@
-## PLITT - Plain LInk To Target
-Plitt adds an extra link next to each search result on Google.
+## Google Sharp
+Prefix google search results with `#n` for direct links
 
-Also available [here](http://userscripts.org/110750) on [userscripts.org](https://userscripts.org/).
+Also available [here](https://openuserjs.org/scripts/ryenus/Google_Sharp) on OpenUserJS.org
 
 ## Note
-Please understand this is not to prevent Google from improving, but to help those behind the infamous GFW use Google with less pain.
+Just for those behind the infamous GFW.
 
 ## Prerequisites
 Make sure you have necessary add-ons installed for your browser:
 
-* Firefox
+| Extensions / Add-ons | Supported Browsers |
+| --- | --- |
+| [TamperMonkey](https://tampermonkey.net/) | Chrome, Microsoft Edge, Safari, Opera Next, and Firefox. |
+| [GreaseMonkey](http://www.greasespot.net/) | FireFox |
 
-    Plitt works with both [GreaseMonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/) and [Scriptish](http://scriptish.org/).
+## License
 
-* Chrome
-
-    Plitt can work with Chrome via [TamperMonkey](https://code.google.com/p/tampermonkey/).
-
+[The MIT License](https://opensource.org/licenses/MIT).
