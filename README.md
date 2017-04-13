@@ -6,6 +6,9 @@ Also available [here](https://openuserjs.org/scripts/ryenus/Google_Sharp) on Ope
 ## Note
 Just for those behind the infamous GFW.
 
+## Screenshot
+<img src="img/screenshot.png" class="inline"/>
+
 ## Prerequisites
 Make sure you have necessary add-ons installed for your browser:
 
