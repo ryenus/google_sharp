@@ -16,7 +16,7 @@
   if (! (d.forms[0] && d.forms[0].action.match(/search/))) return;
   d.addEventListener('DOMSubtreeModified', function() {
     if (t === 0) t = setTimeout(function() {
-      Array.from(d.getElementsByClassName('r')).forEach(function(r, i) {
+      Array.from(d.getElementsByClassName('r'), function(r, i) {
           if (r.children.length == 1) {
               r.insertAdjacentHTML("afterbegin",
                 "<a href='" + r.lastChild.href + "' target='_blank' class='plitt'>[#" + i +"]</a>&nbsp;");
