@@ -4,7 +4,7 @@
 // @description Prefix google search results with `#n` for direct links
 // @copyright   2014+ (https://github.com/ryenus)
 // @license     The MIT License (https://opensource.org/licenses/MIT)
-// @version     1.2
+// @version     1.3
 
 // @homepageURL https://github.com/ryenus/g_sharp
 // @homepageURL https://openuserjs.org/scripts/ryenus/Google_Sharp
@@ -27,7 +27,8 @@
     if (t === 0) t = setTimeout(function() {
       Array.from(d.getElementsByClassName('r'), function(r, i) {
         if (r.children.length == 1) {
-          r.insertAdjacentHTML("afterbegin", "<a href='" + r.lastChild.href +
+          r.insertAdjacentHTML("afterbegin",
+            "<a href='" + r.querySelector('a:last-child').href +
             "' target='_blank' rel='noopener noreferrer' class='g_sharp'>[#" +
             i +"]</a>&nbsp;");
         }
