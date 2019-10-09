@@ -3,8 +3,8 @@
 // @namespace   ryenus.toys
 // @description Prefix google search results with `#n` for direct links
 // @copyright   2014+ (https://github.com/ryenus)
-// @license     The MIT License (https://opensource.org/licenses/MIT)
-// @version     1.3.1
+// @license     MIT
+// @version     1.3.2
 
 // @homepageURL https://github.com/ryenus/g_sharp
 // @homepageURL https://openuserjs.org/scripts/ryenus/Google_Sharp
@@ -24,14 +24,12 @@
 (function(d, t) {
   if (!(d.forms[0] && d.forms[0].action.match(/search/))) return;
   d.addEventListener('DOMSubtreeModified', function() {
-    if (t === 0) t = setTimeout(function() {
-      Array.from(d.getElementsByClassName('r'), function(r, i) {
-        var a = r.getElementsByTagName('a');
-        if (a.length == 1) {
-          r.insertAdjacentHTML("afterbegin", "<a href='" + a[0].href +
-            "' target='_blank' rel='noopener noreferrer' class='g_sharp _ogd'>[#" +
-            i + "]</a>");
-        }
+    if (t !== 0) return;
+	t = setTimeout(function() {
+      Array.from(d.querySelectorAll('.r > a:first-child:not(.g_sharp), .s > a:first-child:not(.g_sharp)'), function(a, i) {
+        a.insertAdjacentHTML("beforebegin", "<a href='" + a.href +
+          "' target='_blank' rel='noopener noreferrer' class='g_sharp'><span style='font-size:18px'>[#" +
+          i + "]</span></a>&nbsp;");
       });
       t = 0;
     }, 500);
